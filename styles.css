@@ -1,0 +1,30 @@
+
+.grid-container {
+    padding:2rem;
+    background-color: blue;
+    max-width:fit-content;
+  }
+.grid-element {
+  border: 0px;
+  
+}
+  .grid-item {
+    background-color: white;
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    padding: 5px;
+    max-width: 90%;
+    max-height: 90%;
+    text-align: center;
+    display: inline-grid;
+    grid-template-columns: repeat( 40,auto);
+    grid-template-rows: repeat( 40,auto);
+
+
+   
+  }
+
+
+
+
+
+
