@@ -5,10 +5,11 @@
     </head>
         <body>
             <link href="styles.css">
-            <h1 id="gametitle">Etch-a-Sketch</h1>
-            <input id="grid10" type="button" value="10 Grid" onclick="createGrid(10);"/>
-            <input id="grid20" type="button" value="20 Grid" onclick="createGrid(20);" />
-            <input id="grid30" type="button" value="30 Grid" onclick="createGrid(30);" />
+            <h1 id="gameTitle">Etch-a-Sketch</h1>
+            <input id="grid10" type="button" value="10 Grid" onclick="createGrid(10); shape10();"/>
+            <input id="grid20" type="button" value="20 Grid" onclick="createGrid(20); shape20();" />
+            <input id="grid30" type="button" value="30 Grid" onclick="createGrid(30); shape30();" />
+            <input id="Clear" type="button" value="Clear" />
                 <div class="grid-container" id="grid">
                     <div class="grid-item" id="item">
                     </div>

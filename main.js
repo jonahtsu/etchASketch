@@ -1,8 +1,5 @@
 const item = document.querySelector("#item");
-//document.getElementById("grid10").onclick = createGrid(10);
-//document.getElementById("grid20").onclick = createGrid(20);
-//document.getElementById("grid30").onclick = createGrid(30);
-//createGrid(40);
+
 function createGrid(size){
 for (let i=0; i< size * size; i++){
     const gridElement = document.createElement("div");
@@ -12,7 +9,42 @@ for (let i=0; i< size * size; i++){
 }
 }
 function fillColour(e){
-  // alert("FILL");
-   //e.target.style.backgroundColor = red;
-  e.target.style.backgroundColor = `rgb(100,10,10)`;
+ let x=Math.floor(Math.random()*100);
+ let y=Math.floor(Math.random()*100);
+ let z=Math.floor(Math.random()*100);
+ console.log(x);
+  e.target.style.backgroundColor = `rgb(${x},${y},${z})`;
+}
+const clear= document.querySelector('#Clear')
+clear.addEventListener('click',function(){
+let cell= item.children;
+for (let i = 0; i < 40*40; i++) {
+  cell[i].style.backgroundColor = 'white';
+}
+});
+
+function shape10() {
+  document.getElementById("item").style.gridTemplateColumns = "repeat(10, 1fr)";
+  document.getElementById("item").style.gridTemplateRows = "repeat(10, 1fr);";
+  var x = document.getElementsByClassName("grid-item");
+  for (let i=1; i< x.length; i++){
+  x[i].style.height = '30px';
+  }
+}
+
+function shape20() {
+  document.getElementById("item").style.gridTemplateColumns = "repeat(20, 1fr)";
+  document.getElementById("item").style.gridTemplateRows = "repeat(15, 1fr);";
+  var x = document.getElementsByClassName("grid-item");
+  for (let i=1; i< x.length; i++){
+  x[i].style.height = '15px';
+  }
+}
+function shape30() {
+  document.getElementById("item").style.gridTemplateColumns = "repeat(30, 1fr)";
+  document.getElementById("item").style.gridTemplateRows = "repeat(30, 1fr);";
+  var x = document.getElementsByClassName("grid-item");
+  for (let i=1; i< x.length; i++){
+  x[i].style.height = '6px';
+  }
 }
